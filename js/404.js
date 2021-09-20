@@ -1,6 +1,6 @@
 //404 Error
 
-setTimeout(function(){ window.location="index"; },3000);
+setTimeout(function(){ window.location="index.html"; },3000);
 
 
 //Menu Hamburger
