@@ -1,0 +1,649 @@
+/* Variables pour les couleurs*/
+
+$font-stack: "Helvetica Neue",
+Arial,
+sans-serif;
+$blue: #388aed;
+$white: #fff;
+$lightgrey: #f1f3fe;
+$black: #000;
+$grey: #2e3b47;
+$lightgreybleu: lightslategray;
+$bleugris: #262d3d;
+$green: #37a864;
+$darkgreen: #319559;
+$babyblue : #f5f6fa;
+$bisque: #ffcd91;
+
+
+/* Variables pour les couleurs*/
+
+/* Generales */
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+body {
+  font-family: $font-stack;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+/* Generales */
+
+
+/* Flex and Container Variables */
+
+@mixin flex {
+  display: flex;
+}
+
+
+@mixin flex-full {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+@mixin container {
+  display: flex;
+  margin: auto;
+  max-width: 1600px;
+}
+
+/* Flex and Container Variables */
+
+
+header {
+  background: $white;
+}
+
+.green {
+  color: $green;
+}
+
+/* Nav */
+
+nav {
+
+  background: $white;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.14),
+    0 3px 8px 0 rgba(0, 0, 0, 0.16);
+  position: relative;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+
+  a {
+    color: $black;
+    text-decoration: none;
+
+  }
+
+  ul {
+    list-style-type: none;
+
+    li {
+      padding: 20px 10px;
+    }
+
+    li:hover {
+      text-decoration: underline;
+    }
+
+    li.noline {
+      text-decoration: none;
+    }
+  }
+
+  h1 {
+    color: $black;
+    padding: 20px;
+  }
+}
+
+/* Nav */
+
+p {
+  color: $grey;
+}
+
+/* Hero Banner */
+
+
+.wrapper {
+  display: flex;
+  margin-bottom: auto;
+  flex-direction: column;
+  background: $babyblue;
+
+  .banner {
+
+    .hero {
+
+      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/hero.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 50vh;
+      object-fit: contain;
+
+    }
+
+    .vert {
+      background: $green;
+
+      p {
+        height: 50vh;
+        width: 100%;
+        @include flex-full;
+        font-size: 1.5em;
+        text-align: center;
+        color: $white;
+        padding: 0 1em;
+      }
+    }
+  }
+
+  .box {
+    i {
+      color: $bleugris;
+    }
+
+    a {
+      text-decoration: none;
+      color: $black;
+    }
+  }
+}
+
+
+/* Hero Banner */
+
+/* Form */
+
+.formflex {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: $babyblue;
+
+  form {
+    display: flex;
+    margin: auto 0;
+    flex-direction: column;
+
+  }
+}
+
+label {
+  letter-spacing: 1.5px;
+  margin: 0 auto !important;
+  display: block !important;
+  float: none !important;
+  color: $bleugris;
+  font-weight: 700;
+}
+
+input {
+  margin: 0.75em auto !important;
+  display: block !important;
+  float: none !important;
+  height: 3em !important;
+  font-family: $font-stack;
+  font-size: 1em;
+  border-radius: 5px;
+  background: $white;
+  border: 1px solid transparent;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.04),
+    0 3px 1px -2px rgba(0, 0, 0, 0.12),
+    0 1px 5px 0 rgba(0, 0, 0, 0.2);
+
+}
+
+
+/* Button */
+
+.button,
+button {
+  background: $green;
+  color: $white;
+  border: 1px solid $green;
+  border-radius: 5px !important;
+  margin-bottom: 1em;
+  padding: 1em;
+  width: 150px;
+  cursor: pointer;
+}
+
+input[type=text]:focus {
+  outline: 1.5px solid $blue;
+}
+
+input[type=date]:focus {
+  outline: 1.5px solid $blue;
+}
+
+input[type=email]:focus {
+  outline: 1.5px solid $blue;
+}
+
+input[type=button]:hover {
+  background: $darkgreen;
+
+}
+
+
+/* Button */
+
+/* Form */
+
+/* Footer */
+
+footer {
+  background: $bleugris;
+  height: 5vh;
+  @include flex-full;
+  color: $white;
+
+  a {
+    color: $white;
+    text-decoration: none;
+  }
+
+  p {
+    color: $white;
+    display: flex;
+    align-items: center;
+  }
+
+  ul {
+    display: flex;
+    list-style: none;
+
+    li {
+      padding: 10px 10px;
+    }
+
+    ul li:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+/* Footer */
+
+/* Types de propriete */
+
+.background {
+  height: 100vh;
+  display: flex;
+  background: $lightgreybleu;
+  flex-direction: column;
+
+  .typesproprietes {
+    list-style: none;
+    display: flex;
+    margin: auto 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+
+    a {
+      color: $white;
+      text-decoration: none;
+      font-size: 1.2em;
+
+    }
+
+    a:hover {
+      color: $bisque;
+      font-size: 1.25em;
+    }
+
+  }
+
+}
+
+/* Types de propriete */
+
+/* Terms & condition / Privacy Policy*/
+
+.terms {
+  padding: 2em 1em;
+  max-width: 1600px;
+  margin: auto;
+
+  h2 {
+    margin-top: 1em;
+  }
+}
+
+/* Terms & condition / Privacy Policy*/
+
+
+/* Contact */
+
+.contact {
+  display: flex;
+  margin: auto;
+  max-width: 400px;
+  flex-direction: column;
+  padding: 0 1em;
+
+  h2 {
+    margin-bottom: 0.5em;
+  }
+
+  p,
+  a {
+    margin-bottom: 1.25em;
+  }
+
+  a {
+    text-decoration: none;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+/* Contact */
+
+
+/* 404 Error*/
+
+.error {
+  margin: auto;
+}
+
+/* 404 Error*/
+
+@media screen and (min-width: 975px) {
+
+  /* Nav */
+
+  nav {
+    .container {
+      @include container;
+
+      ul {
+        display: flex;
+        margin-left: auto;
+        padding-right: 10px;
+
+        li {
+          @include flex-full;
+          min-width: 100px;
+        }
+      }
+    }
+  }
+
+  /* Nav */
+
+  .container {
+    @include container;
+
+    .hero {
+      width: 50%;
+    }
+
+    .vert {
+      width: 50%;
+    }
+  }
+
+
+  label {
+    width: 600px !important;
+  }
+
+  input {
+    width: 600px !important;
+  }
+
+  /* Hamburger */
+
+  .hamburger {
+    display: none;
+  }
+
+  /* Hamburger */
+
+  .padding {
+    padding: 3em 0;
+  }
+
+  /* Boxes */
+
+  .babyblue {
+
+
+    .info {
+      overflow: auto;
+      height: 38vh;
+      max-width: 1600px;
+      margin: auto;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .box {
+      width: 33.3%;
+      text-align: center;
+
+      i {
+        margin-bottom: 10px;
+
+      }
+
+      p {
+        color: $black;
+      }
+    }
+
+  }
+
+  /* Boxes */
+
+  /* Footer */
+
+  footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+
+    .container {
+      @include container;
+
+      p {
+        @include flex;
+
+      }
+
+      a {
+        @include flex;
+
+      }
+
+      ul {
+        padding: 0 10px;
+        @include flex-full;
+
+      }
+    }
+  }
+
+
+}
+
+
+@media screen and (max-width: 975px) {
+  .menu {
+    padding: 0;
+    display: none;
+    background: $bleugris;
+  }
+
+  .menu__active {
+    display: block;
+
+  }
+
+  nav {
+    li {
+      text-align: center;
+
+      a {
+        color: $white;
+      }
+
+    }
+
+    h1 {
+      margin: auto;
+      text-align: center;
+
+    }
+  }
+
+  .banner {
+
+    .hero {
+      display: none;
+    }
+
+    .vert {
+      width: 100%;
+    }
+  }
+
+  label {
+
+    width: 95% !important;
+
+  }
+
+  input {
+
+    width: 95% !important;
+  }
+
+  .top {
+    margin-top: 68px;
+  }
+
+  .slideshow {
+    margin-top: 68px;
+  }
+
+  /* Hamburger */
+
+  header {
+    @include flex-full;
+    padding: 0 20px;
+  }
+
+  .hamburger {
+    cursor: pointer;
+  }
+
+  .hamburger div {
+    transition: transform 0.3s ease-in;
+  }
+
+  .line {
+    width: 20px;
+    height: 3px;
+    background-color: $black;
+  }
+
+  .line:nth-child(2) {
+    margin: 3px 0;
+  }
+
+  .toggle .line:nth-child(1) {
+    transform: rotate(-45deg) translate(-2.75px, 5.35px);
+  }
+
+  .toggle .line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .toggle .line:nth-child(3) {
+    transform: rotate(45deg) translate(-2.75px, -5.35px);
+  }
+
+  .padding {
+    padding: 1em 0;
+  }
+
+  /* Hamburger */
+
+
+  /* Boxes */
+
+  .babyblue {
+
+
+    .box {
+      float: none;
+      width: 100%;
+      padding: 50px;
+      text-align: center;
+
+
+      p {
+        color: $black;
+      }
+    }
+  }
+
+  /* Boxes */
+
+  /* Footer */
+
+  footer {
+
+    height: 250px;
+
+    .container {
+      margin: 1em auto;
+      text-align: center;
+
+      ul {
+        flex-direction: column;
+        padding: 0 10px;
+      }
+
+      p {
+        padding: 0 20px;
+        margin: 1em 0;
+      }
+    }
+  }
+
+  /* Footer */
+
+  /* Form */
+
+  form {
+    padding: 2em 1em;
+  }
+
+  /* Form */
+
+
+}

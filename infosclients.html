@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Agence immobiliere Bellemaison - Acheter une maison, une propriete de vos reves.">
+  <meta name="keywords" content="maisons,condos,duplex,unifamiliales,propriete">
+  <meta name="author" content="Brian Gotti">
+  <title>Agence Immobiliere Bellemaison - Infos Clients</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<!-- Nav -->
+
+<body class="formflex">
+  <nav>
+    <div class="container">
+      <header>
+        <h1><a href="menu.html">Agence <span class="green">immobiliere</span> Bellemaison</a></h1>
+        <div class="hamburger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+
+      </header>
+
+      <ul class="menu">
+        <li><a href="menu.html">Accueil</a></li>
+        <li><a href="infosclients.html">Infos clients</a></li>
+        <li><a href="typesdeproprietes.html">Types de propriete</a></li>
+        <li><a href="calculhypotheque.html">Calcul hypotheque</a></li>
+      </ul>
+    </div>
+
+  </nav>
+
+  <!-- Nav -->
+
+  <!-- Formulaire -->
+
+  <form name="formulaire" action="#">
+    <label for="nom">Nom</label>
+    <input type="text" size="35" name="nom" required>
+
+    <label for="prenom">Prenom</label>
+    <input type="text" size="35" name="prenom" required>
+
+    <label for="email">Email</label>
+    <input type="email" size="35" name="email" required>
+
+    <label for="adresse">Adresse</label>
+    <input type="text" size="35" name="adresse" required>
+
+    <label for="datenaissance">Date de naissance</label>
+    <input type="date" size="35" name="datenaissance" required>
+
+    <input type="button" class="button" value="Valider" onclick="confirmer(this.form);">
+    <input type="button" class="button" name="Effacer" value="Effacer" onclick="this.form.reset();">
+  </form>
+
+  <!-- Formulaire -->
+
+  <!-- Footer -->
+
+  <footer>
+    <div class="container">
+      <p>Copyright &copy; &nbsp;<span id="annee"></span></p>
+      <ul class="footer__menu">
+        <li><a href="privacypolicy.html">Privacy Policy</a></li>
+        <li><a href="termsandconditions.html">Terms & Conditions</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Footer -->
+
+  <script src="js/formulaire.js"></script>
+
+</body>
+
+</html>
